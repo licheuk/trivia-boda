@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#65243a"><meta name="description" content="Una trivia hecha con amor para celebrar nuestra boda.">
+  <title>La trivia de las novias · 07.11.2026</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+  <main class="shell">
+    <header class="brand">
+      <div class="eyebrow"><span class="tiny-heart">♥</span> NUESTRA BODA · 07.11.2026 <span class="tiny-heart">♥</span></div>
+      <div class="photo-frame"><img class="couple-photo illustrated-cover" src="assets/couple-cover.webp" alt="Ilustración romántica de las dos novias junto a Grecia, Copérnico y Cántico" fetchpriority="high"><span class="photo-caption">Una historia, dos corazones</span></div>
+      <div class="monogram">L <span>&</span> E</div>
+      <h1>¿Qué tanto nos<br><em>conoces?</em></h1>
+      <p class="subtitle">Una pequeña aventura por nuestra historia de amor</p>
+      <div class="flourish" aria-hidden="true">✦ ───── ♡ ───── ✦</div>
+    </header>
+
+    <section id="statusCard" class="card status-card"><div class="loader"></div><p>Preparando una sorpresa…</p></section>
+
+    <section id="welcome" class="card hidden">
+      <div class="card-kicker"><span>01</span><span>EL RETO DE LOS INVITADOS</span></div>
+      <h2>¡A jugar con el corazón!</h2>
+      <p>¿Quién conoce mejor a las novias? Responde unas preguntas sobre nuestra historia y acompáñanos en este recuerdo. El resultado se revelará al final.</p>
+      <label for="code">Tu código personal</label>
+      <input id="code" autocomplete="off" autocapitalize="characters" placeholder="Escribe tu código · BODA001" maxlength="24">
+      <button id="startBtn" class="primary">Comenzar la trivia <span>→</span></button>
+      <p class="fine">Tu código permite una sola participación. ¡Guarda el secreto hasta el final!</p>
+      <p id="welcomeError" class="error" role="alert"></p>
+      <div class="cat-greeting"><span class="paw">✧</span><span>La trivia está aprobada por nuestro comité felino</span><span class="paw">✧</span></div>
+      
+    </section>
+
+    <section id="quiz" class="card hidden">
+      <div class="quiz-top"><span id="progressLabel">Pregunta 1 de 15</span><span id="answeredLabel">0 respondidas</span></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <span class="step" id="questionNumber">PREGUNTA 01</span><div class="question-heading"><div class="question-ornament" aria-hidden="true">♡</div><h2 id="questionText"></h2></div><div id="options" class="options"></div>
+      <div class="quiz-actions"><button id="backBtn" class="secondary">← Anterior</button><button id="nextBtn" class="primary">Siguiente →</button></div>
+      <p id="quizError" class="error" role="alert"></p>
+      <div class="quiz-cat-note">Un ronroneo de suerte para ti <span aria-hidden="true">🐾</span></div>
+    </section>
+
+    <section id="review" class="card hidden"><div class="card-kicker"><span>02</span><span>EL ÚLTIMO PASO</span></div><h2>¿Todo listo?</h2><p id="reviewText"></p><p class="fine">Después de enviar no podrás modificar tus respuestas. El puntaje se mantendrá en secreto hasta el anuncio final.</p><button id="submitBtn" class="primary">Enviar participación <span>♡</span></button><button id="editBtn" class="text-button">Volver a revisar</button><p id="submitError" class="error" role="alert"></p></section>
+
+    <section id="done" class="card hidden"><div class="done-icon">♡</div><span class="step">¡MISIÓN CUMPLIDA!</span><h2>Tu participación está guardada</h2><p>Gracias por jugar y por ser parte de nuestra historia. El resultado se anunciará al final de la trivia.</p><div class="done-photo"><img src="assets/couple-selfie.webp" alt="Las novias sonriendo juntas" loading="lazy"></div><p class="fine">Ahora toca guardar el secreto… nuestros gatitos estarán vigilando. 🐾</p></section>
+
+    <section id="closed" class="card hidden"><div class="done-icon">♡</div><span class="step">TRIVIA CERRADA</span><h2>¡Gracias por acompañarnos!</h2><p>El reto terminó por ahora. Las novias anunciarán el resultado durante la celebración.</p></section>
+
+    <footer><div class="footer-rule">♡</div><p>Hecho con amor por las novias</p><span>Liseth & Erika · 7 de noviembre de 2026</span></footer>
+  </main>
+  <iframe name="postFrame" id="postFrame" class="hidden-frame" title="Envío de participación"></iframe><form id="postForm" method="post" target="postFrame" class="hidden-frame"><input name="payload" id="payloadField"></form>
+  <script src="config.js"></script><script src="app.js"></script>
+</body></html>
